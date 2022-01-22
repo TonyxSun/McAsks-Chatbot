@@ -26,3 +26,4 @@ Your personal assistant :) . Made with ❤️ at McHacks 2022.
 ### Supported actions
 - `cat`
 - `quote`
+- `joke`
