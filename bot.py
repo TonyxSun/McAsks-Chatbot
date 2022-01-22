@@ -5,6 +5,8 @@ from requests.structures import CaseInsensitiveDict
 from dotenv import load_dotenv
 import os
 
+from search import *
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -36,10 +38,12 @@ def bot():
             quote = 'I could not retrieve a quote at this time, sorry.'
         msg.body(quote)
         responded = True
+
     if 'cat' in incoming_msg:
         # return a cat pic
         msg.media('https://cataas.com/cat')
         responded = True
+
     if "giraffe" in incoming_msg:
         ''' the below uses M3O's API to send the message. It will come from a different number but won't contain the annoying Twilio line'''
         url = "https://api.m3o.com/v1/emoji/Send"
@@ -55,10 +59,13 @@ def bot():
         """
         resp = requests.post(url, headers=headers, data=data)
         responded = True
+
     if not responded:
-        msg.body('I only know about famous quotes and cats, sorry!')
+        ans = run_json(incoming_msg)
+        msg.body(ans)
+
     return str(resp)
 
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run()

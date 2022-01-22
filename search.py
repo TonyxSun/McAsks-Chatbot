@@ -1,0 +1,50 @@
+import json
+from urllib.request import urlopen
+import nltk
+from nltk.corpus import stopwords
+
+def is_question(text):
+    q_words = ["what", "where", "who", "how", "when", "why"]
+    for word in q_words:
+        if word in text:
+            return True
+    return False
+
+def get_word(text):
+    stop_words = set(stopwords.words('english'))
+
+    word_tokens = nltk.word_tokenize(text)
+
+    filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
+
+    filtered_sentence = []
+
+    for w in word_tokens:
+        if w not in stop_words:
+            filtered_sentence.append(w)
+
+    return filtered_sentence
+
+def run_json(term):
+    """
+    new_search_term = ""
+    search_term = term.split()
+    for i in range(len(search_term)):
+        if i == 0:
+            new_search_term = search_term[i]
+        else:
+            new_search_term = new_search_term + "+" + search_term[i]
+    """
+    #term = get_word(term)[0]
+
+    file = "http://api.duckduckgo.com/?q=" + term + "&format=json"
+    print(file)
+    response = urlopen(file)
+
+    data_json = json.loads(response.read())
+
+    print(data_json['Abstract'])
+
+if __name__ == "__main__":
+
+    run_json("canucks")
