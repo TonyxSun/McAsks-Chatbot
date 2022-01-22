@@ -4,6 +4,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 from requests.structures import CaseInsensitiveDict
 from dotenv import load_dotenv
 import os
+import search
 
 load_dotenv()
 
@@ -63,10 +64,15 @@ def bot():
         }
         resp = requests.post(url, headers=headers, json=data_msg)
         responded = True
+
     if not responded:
-        msg.body('I don\'t know how to answer that, sorry!')
+        body = search.run_json(incoming_msg)
+        if body == "":
+            msg.body('I don\'t know how to answer that, sorry!')
+        else:
+            msg.body(search.run_json(incoming_msg))
     return str(resp)
 
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run()
