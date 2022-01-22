@@ -1,15 +1,24 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
+from requests.structures import CaseInsensitiveDict
+
 
 app = Flask(__name__)
 
+# app name
+@app.errorhandler(404)
+  
+# inbuilt function which takes error as parameter
+def not_found(e):
+# defining function
+    return render_template("404.html")
 
 @app.route('/bot', methods=['POST'])
 def bot():
     # obtain body of request
     incoming_msg = request.values.get('Body', '').lower()
-    
+
     # prepare response object
     resp = MessagingResponse()
     msg = resp.message()
@@ -28,10 +37,25 @@ def bot():
         # return a cat pic
         msg.media('https://cataas.com/cat')
         responded = True
+    if "giraffe" in incoming_msg:
+        ''' the below uses M3O's API to send the message. It will come from a different number but won't contain the annoying Twilio line'''
+        url = "https://api.m3o.com/v1/emoji/Send"
+        headers = CaseInsensitiveDict()
+        headers["Content-Type"] = "application/json"
+        headers["Authorization"] = "Bearer Mzc0YTE1ZWItYjdlOC00MzUyLWE3YTgtMDdlNzZhMmI4NmU5"
+        data = """
+        {
+        "from": "McAsks",
+        "message": "let's grab a :giraffe:",
+        "to": "6812990111"
+        }
+        """
+        resp = requests.post(url, headers=headers, data=data)
+        responded = True
     if not responded:
         msg.body('I only know about famous quotes and cats, sorry!')
     return str(resp)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8080)

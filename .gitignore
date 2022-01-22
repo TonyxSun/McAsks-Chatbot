@@ -127,3 +127,19 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+twilio-bot-venv/pyvenv.cfg
+twilio-bot-venv/bin/activate
+twilio-bot-venv/bin/activate.csh
+twilio-bot-venv/bin/activate.fish
+twilio-bot-venv/bin/Activate.ps1
+twilio-bot-venv/bin/flask
+twilio-bot-venv/bin/normalizer
+twilio-bot-venv/bin/pip
+twilio-bot-venv/bin/pip3
+twilio-bot-venv/bin/pip3.8
+twilio-bot-venv/bin/python
+twilio-bot-venv/bin/python3
+
+.gitignore
+ngrok
+.gitignore
