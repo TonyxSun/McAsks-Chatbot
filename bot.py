@@ -2,7 +2,10 @@ from flask import Flask, request, render_template
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 from requests.structures import CaseInsensitiveDict
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -42,7 +45,7 @@ def bot():
         url = "https://api.m3o.com/v1/emoji/Send"
         headers = CaseInsensitiveDict()
         headers["Content-Type"] = "application/json"
-        headers["Authorization"] = "Bearer Mzc0YTE1ZWItYjdlOC00MzUyLWE3YTgtMDdlNzZhMmI4NmU5"
+        headers["Authorization"] = "Bearer %s"%os.environ['M3O_TOKEN']
         data = """
         {
         "from": "McAsks",
