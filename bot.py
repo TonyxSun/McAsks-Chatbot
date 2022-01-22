@@ -7,21 +7,37 @@ import os
 
 load_dotenv()
 
+config = {
+    "DEBUG": True  # run app in debug mode
+}
+
+# define common header for all M3O access
+headers = CaseInsensitiveDict()
+headers["Content-Type"] = "application/json"
+headers["Authorization"] = "Bearer %s" % os.environ['M3O_TOKEN']
+
 app = Flask(__name__)
+app.config.from_mapping(config)
 
 # app name
+
+
 @app.errorhandler(404)
-  
 # inbuilt function which takes error as parameter
 def not_found(e):
-# defining function
+    # defining function
     return render_template("404.html")
+
 
 @app.route('/bot', methods=['POST'])
 def bot():
     # obtain body of request
     incoming_msg = request.values.get('Body', '').lower()
+    incoming_number = request.values.get('From', '')
+    incoming_number = incoming_number.replace('+', '', 1)
 
+    print('Message: {msg} from {number}'.format(
+        msg=incoming_msg, number=incoming_number))
     # prepare response object
     resp = MessagingResponse()
     msg = resp.message()
@@ -40,23 +56,24 @@ def bot():
         # return a cat pic
         msg.media('https://cataas.com/cat')
         responded = True
-    if "giraffe" in incoming_msg:
-        ''' the below uses M3O's API to send the message. It will come from a different number but won't contain the annoying Twilio line'''
-        url = "https://api.m3o.com/v1/emoji/Send"
-        headers = CaseInsensitiveDict()
-        headers["Content-Type"] = "application/json"
-        headers["Authorization"] = "Bearer %s"%os.environ['M3O_TOKEN']
-        data = """
-        {
-        "from": "McAsks",
-        "message": "let's grab a :giraffe:",
-        "to": "6812990111"
+    if "joke" in incoming_msg:
+        # get joke
+        url = "https://api.m3o.com/v1/joke/Random"
+        data = {
+            'count': '1'
         }
-        """
-        resp = requests.post(url, headers=headers, data=data)
+        resp = requests.post(url, headers=headers, json=data)
+        # send back msg
+        url = "https://api.m3o.com/v1/emoji/Send"
+        data_msg = {
+            "from": "your assistant McAsks",
+            "message": "{}".format(resp.json()['jokes'][0]['body']+ "\n"),
+            "to": "{}".format(incoming_number)
+        }
+        resp = requests.post(url, headers=headers, json=data_msg)
         responded = True
     if not responded:
-        msg.body('I only know about famous quotes and cats, sorry!')
+        msg.body('I don\'t know how to answer that, sorry!')
     return str(resp)
 
 
