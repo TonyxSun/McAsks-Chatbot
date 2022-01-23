@@ -43,7 +43,8 @@ def bot():
         parameter2 = split_msg[2]
         print(parameter1, parameter2)
 
-    greetings = ["hi", "hello", "hey", "helloo", "hellooo", "g morining", "gmorning", "good morning", "morning", "good day", "good afternoon", "good evening", "greetings", "greeting", "good to see you", "its good seeing you", "how are you", "how're you", "how are you doing", "how ya doin'", "how ya doin", "how is everything", "how is everything going", "how's everything going", "how is you", "how's you", "how are things", "how're things", "how is it going", "how's it going", "how's it goin'", "how's it goin", "how is life been treating you", "how's life been treating you", "how have you been", "how've you been", "what is up", "what's up", "what is cracking", "what's cracking", "what is good", "what's good", "what is happening", "what's happening", "what is new", "what's new", "what is neww", "g’day", "howdy"]
+    greetings = ["hi", "hello", "hey", "helloo", "hellooo", "g morining", "gmorning", "good morning", "morning", "good day", "good afternoon", "good evening", "greetings", "greeting", "good to see you", "its good seeing you", "how are you", "how're you", "how are you doing", "how ya doin'", "how ya doin", "how is everything", "how is everything going", "how's everything going", "how is you", "how's you",
+                 "how are things", "how're things", "how is it going", "how's it going", "how's it goin'", "how's it goin", "how is life been treating you", "how's life been treating you", "how have you been", "how've you been", "what is up", "what's up", "what is cracking", "what's cracking", "what is good", "what's good", "what is happening", "what's happening", "what is new", "what's new", "what is neww", "g’day", "howdy"]
 
     for word in greetings:
         if word in incoming_msg:
@@ -52,7 +53,7 @@ def bot():
 
     if 'about' in incoming_msg:
         msg.body("Hello and welcome! For directions, follow the format " +
-                "\"directions\", [street city], [street city]. For information, type the word " +
+                 "\"directions\", [street city], [street city]. For information, type the word " +
                  "for whatever you're curious about. To see this message again, type \"about\".")
         responded = True
 
@@ -83,7 +84,7 @@ def bot():
         url = "https://api.m3o.com/v1/emoji/Send"
         data_msg = {
             "from": "your assistant McAsks",
-            "message": "{}".format(resp.json()['jokes'][0]['body']+ "\n"),
+            "message": "{}".format(resp.json()['jokes'][0]['body'] + "\n"),
             "to": "{}".format(incoming_number)
         }
         resp = requests.post(url, headers=headers, json=data_msg)
@@ -109,7 +110,6 @@ def bot():
         else:
             x = weather.get_cur_weather(parameter3.split(" "), parameter1)
         """
-
 
     if not responded:
         body = search.run_json(incoming_msg)
