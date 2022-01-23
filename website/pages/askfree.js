@@ -27,8 +27,9 @@ export default function ASK() {
               src="/Ellipse.png"
               style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{fontWeight: '600' }}>Title Placeholder</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p style={{fontWeight: '600' }}>Search</p>
+              <p>                Wanted to know what a term means but don't have internet? Fret not!
+</p>
             </div>
 
             <div className={styles.card}>
@@ -36,8 +37,8 @@ export default function ASK() {
               src="/Ellipse.png"
               style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{fontWeight: '600' }}>Title Placeholder</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p style={{fontWeight: '600' }}>Location/Directions</p>
+              <p>Never get lost again with on-deman location and directions.</p>
             </div>
 
             <div className={styles.card}>
@@ -45,16 +46,16 @@ export default function ASK() {
               src="/Ellipse.png"
               style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{fontWeight: '600' }}>Title Placeholder</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p style={{fontWeight: '600' }}>Jokes</p>
+              <p>McAsks is always there for you to brighten up your day!</p>
             </div>
             <div className={styles.card}>
               <img
               src="/Ellipse.png"
               style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{fontWeight: '600' }}>Title Placeholder</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p style={{fontWeight: '600' }}>Quotes</p>
+              <p>Need some motivation at 8am? We've got your back.</p>
             </div>
           </div>
         </section>

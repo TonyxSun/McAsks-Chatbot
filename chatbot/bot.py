@@ -1,9 +1,11 @@
+from inspect import Parameter
 from flask import Flask, request, render_template
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 from requests.structures import CaseInsensitiveDict
 from dotenv import load_dotenv
 import os
+from directions import getDirections
 import search
 
 load_dotenv()
@@ -34,6 +36,12 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
+    split_msg = incoming_msg.split(',')
+    if len(split_msg) > 1:
+        parameter1 = split_msg[1]
+        parameter2 = split_msg[2]
+        print(parameter1, parameter2)
+
     if 'quote' in incoming_msg:
         # return a quote
         r = requests.get('https://api.quotable.io/random')
@@ -64,6 +72,9 @@ def bot():
         }
         resp = requests.post(url, headers=headers, json=data_msg)
         responded = True
+    if 'directions' in incoming_msg:
+        resp.message(getDirections(parameter1, parameter2))
+        responded = True
 
     if not responded:
         body = search.run_json(incoming_msg)
@@ -75,4 +86,4 @@ def bot():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port="8080")

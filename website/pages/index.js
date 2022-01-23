@@ -56,10 +56,9 @@ export default function Home() {
                 src="/Ellipse.png"
                 style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{ fontWeight: "600" }}>Title Placeholder</p>
+              <p style={{ fontWeight: "600" }}>Location</p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Never get lost again with on-deman location and directions.
               </p>
             </div>
 
@@ -68,10 +67,9 @@ export default function Home() {
                 src="/Ellipse.png"
                 style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{ fontWeight: "600" }}>Title Placeholder</p>
+              <p style={{ fontWeight: "600" }}>Search</p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Wanted to know what a term means but don't have internet? Fret not!
               </p>
             </div>
 
@@ -80,10 +78,9 @@ export default function Home() {
                 src="/Ellipse.png"
                 style={{ margin: "20px", width: "135px" }}
               />
-              <p style={{ fontWeight: "600" }}>Title Placeholder</p>
+              <p style={{ fontWeight: "600" }}>Jokes</p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                McAsks is always there for you to brighten up your day!
               </p>
             </div>
           </div>
@@ -97,7 +94,7 @@ export default function Home() {
 
           <div className={styles.gridlayout}>
             <p style={{ fontSize: "1.2rem" }}>
-              Find in-depth information about Next.js features and API.
+              Long-standing and accurate location data by Geoapify.
             </p>
             <hr />
             <div
@@ -115,7 +112,7 @@ export default function Home() {
             style={{ top: "-3rem", left: "-10rem" }}
           >
             <p style={{ fontSize: "1.2rem" }}>
-              Find in-depth information about Next.js features and API.
+              Find in-depth information through the search API.
             </p>
             <hr />
             <div
@@ -130,7 +127,7 @@ export default function Home() {
 
           <div className={styles.gridlayout} style={{ top: "-6rem" }}>
             <p style={{ fontSize: "1.2rem" }}>
-              Find in-depth information about Next.js features and API.
+              Your information and conversations are always safe.
             </p>
             <hr />
             <div
