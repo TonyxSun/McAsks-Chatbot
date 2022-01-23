@@ -34,7 +34,7 @@ export default function Home() {
             <h1 className={styles.title}>You ask,</h1>
             <h1 className={styles.title2}>We answer</h1>
             <br></br>
-            <Link href="/askfree">
+            <Link href="/ask">
               <button className={styles.button}>TRY FOR FREE &rarr;</button>
             </Link>
           </div>
