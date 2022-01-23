@@ -31,7 +31,7 @@ def get_weather(location, time):
             if count == 2:
                 weather = weather + "Finally, on "
             date = datetime.strptime(day['date'], "%Y-%m-%d").strftime("%a, %b. %-d")
-            weather = weather + date + ", there will be " + day['day']['condition']['text'].lower() + " with an average temperature of " + str(day['day']['avgtemp_c']) + " degrees C and " + str(day['day']["totalprecip_mm"]) + " mm of precipitation. The chance of rain is " + str(day['day']["daily_chance_of_rain"]) + " and the chance of snow is " +  str(day['day']["daily_chance_of_snow"]) + ".\n"
+            weather = weather + date + ", there will be " + day['day']['condition']['text'].lower() + " with an average temperature of " + str(day['day']['avgtemp_c']) + " degrees C and " + str(day['day']["totalprecip_mm"]) + " mm of precipitation. The chance of rain is " + str(day['day']["daily_chance_of_rain"]) + "% and the chance of snow is " +  str(day['day']["daily_chance_of_snow"]) + "%.\n"
             count += 1
         return weather
 
