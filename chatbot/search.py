@@ -3,6 +3,7 @@ from urllib.request import urlopen
 import nltk
 from nltk.corpus import stopwords
 
+
 def is_question(text):
     q_words = ["what", "where", "who", "how", "when", "why"]
     for word in q_words:
@@ -10,11 +11,13 @@ def is_question(text):
             return True
     return False
 
+
 def get_word(text):
     stop_words = set(stopwords.words('english'))
     word_tokens = nltk.word_tokenize(text)
     filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
     return filtered_sentence
+
 
 def search(term):
     """
@@ -41,8 +44,8 @@ def search(term):
 
     return str(resp)
 
+
 if __name__ == "__main__":
 
     x = run_json("beachball")
-    print (x)
-
+    print(x)
