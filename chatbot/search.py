@@ -16,7 +16,7 @@ def get_word(text):
     filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
     return filtered_sentence
 
-def run_json(term):
+def search(term):
     """
     new_search_term = ""
     search_term = term.split()
@@ -26,8 +26,8 @@ def run_json(term):
         else:
             new_search_term = new_search_term + "+" + search_term[i]
     """
-    #term = get_word(term)[0]
-    term = term.strip(' \n')
+    term = get_word(term)[0]
+    term = term.strip(' \n?')
     file = "http://api.duckduckgo.com/?q=" + term + "&format=json"
 
     response = urlopen(file)
