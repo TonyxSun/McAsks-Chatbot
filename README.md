@@ -27,6 +27,7 @@ Your personal assistant :) . Made with ❤️ at McHacks 2022.
 - `cat`
 - `quote`
 - `joke`
+- `cowsay`
 - `Directions, [street city departure], [street city arrival]`
 - `Weather, [city], [current/forecast]`
 - `term`*(search)*
