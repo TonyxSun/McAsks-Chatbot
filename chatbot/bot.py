@@ -68,6 +68,11 @@ def bot():
         msg.body(quote)
         responded = True
 
+    if 'cowsay' in incoming_msg:
+        text = " __________________________\n" + "/ Why are cows always broke? \\\n" +  "\ Someone’s always milking     /\n" + "/ them dry.                                  \\\n" +   "__________________________\n" + "            \   ^__^                       \n" +  "             \  (oo)\_____                 \n" + "                 (__)\       )\/\\          \n" + "                     ||----w |             \n"  +"                     ||          ||               "
+        msg.body(text)
+        responded = True
+
     if 'cat' in incoming_msg:
         # return a cat pic
         msg.media('https://cataas.com/cat')
