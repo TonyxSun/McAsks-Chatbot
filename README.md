@@ -13,7 +13,7 @@ Your personal assistant :) . Made with ❤️ at McHacks 2022.
 
 ## Instructions
 
-### Setting up
+### Set up
 
 1. Set up virtual environment (optional) and make sure all dependencies are installed. 
 2. Run the Flask app: `python3 bot.py`
@@ -28,5 +28,6 @@ Your personal assistant :) . Made with ❤️ at McHacks 2022.
 - `quote`
 - `joke`
 - `Directions, [street city departure], [street city arrival]`
+- `Weather, [city], [current/forecast]`
 - `term`*(search)*
-- more to come!!!!!
+-  more to come!!!!!
