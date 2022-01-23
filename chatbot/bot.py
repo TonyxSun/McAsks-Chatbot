@@ -52,8 +52,9 @@ def bot():
 
     if 'about' in incoming_msg:
         msg.body("Hello and welcome! For directions, follow the format " +
-                "\"directions\", [street city], [street city]. For information, type the word " +
-                 "for whatever you're curious about. To see this message again, type \"about\".")
+                "\"directions\", [street city], [street city]. For weather, follow the format" +
+                " \"weather\", [location], [forecast/current]. For information, type the word " +
+                 "for whatever you're curious about. To see this message again, type \"about\". ")
         responded = True
 
     if 'quote' in incoming_msg:
