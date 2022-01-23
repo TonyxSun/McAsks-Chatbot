@@ -16,7 +16,7 @@ def get_word(text):
     filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
     return filtered_sentence
 
-def run_json(term):
+def search(term):
     """
     new_search_term = ""
     search_term = term.split()

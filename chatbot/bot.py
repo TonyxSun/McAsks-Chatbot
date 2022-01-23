@@ -46,8 +46,8 @@ def bot():
     greetings = ["hi", "hello", "hey", "helloo", "hellooo", "g morining", "gmorning", "good morning", "morning", "good day", "good afternoon", "good evening", "greetings", "greeting", "good to see you", "its good seeing you", "how are you", "how're you", "how are you doing", "how ya doin'", "how ya doin", "how is everything", "how is everything going", "how's everything going", "how is you", "how's you", "how are things", "how're things", "how is it going", "how's it going", "how's it goin'", "how's it goin", "how is life been treating you", "how's life been treating you", "how have you been", "how've you been", "what is up", "what's up", "what is cracking", "what's cracking", "what is good", "what's good", "what is happening", "what's happening", "what is new", "what's new", "what is neww", "g’day", "howdy"]
 
     for word in greetings:
-        if word in incoming_msg:
-            msg.body("Hello! Type \"about\" for instructions")
+        if word in incoming_msg and not responded:
+            msg.body("Hello! How can I help you? Type \"about\" for instructions")
             responded = True
 
     if 'about' in incoming_msg:
@@ -101,23 +101,15 @@ def bot():
         msg.body(x)
         responded = True
 
-        """
-        if parameter2 == "forecast":
-            if "-" not in parameter3:
-                x = weather.get_future_weather1(parameter1)
-            else:
-                x = weather.get_future_weather(parameter1, parameter3)
-        else:
-            x = weather.get_cur_weather(parameter3.split(" "), parameter1)
-        """
-
+    if len(incoming_msg.split()) == 1:
+        try:
+            msg.body(search.search(incoming_msg))
+            responded = True
+        except:
+            pass
 
     if not responded:
-        body = search.run_json(incoming_msg)
-        if body == "":
-            msg.body('I don\'t know how to answer that, sorry!')
-        else:
-            msg.body(search.run_json(incoming_msg))
+        msg.body('I don\'t know how to answer that, sorry! Type \"about\" for instructions.')
     return str(resp)
 
 
