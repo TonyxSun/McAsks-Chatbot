@@ -3,6 +3,7 @@
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import styles from "../styles/Home.module.css";
+import { Form } from "../components/Form";
 
 
 export default function ASK() {
@@ -13,7 +14,8 @@ export default function ASK() {
   <section className={styles.chat}>
       <div>
       <h1 className={styles.title2}>Let's Chat.</h1>
-      <input className={styles.textinput } type="text" value="YOUR PHONE NUMBER HERE"/><button className={styles.button}>&rarr;</button>
+      <Form />
+      {/* <input className={styles.textinput } type="text" autoComplete="YOUR PHONE NUMBER HERE"/><button className={styles.button}>&rarr;</button> */}
     </div>
 
     </section>
