@@ -1,1 +1,227 @@
-.Home_main__nLjiQ{flex:1 1;display:flex;flex-direction:column;justify-content:center;align-items:center}.Home_section__taYTg{width:100%;min-height:25rem;display:flex;flex-direction:row;align-items:stretch;justify-content:space-evenly}.Home_nav__vYbrQ{background-color:#e6faf2}.Home_footer____T7K,.Home_nav__vYbrQ{display:flex;flex-direction:row;justify-content:space-around;align-items:center}.Home_footer____T7K{background:#000;padding:2rem 0;border-top:1px solid #eaeaea}.Home_footer____T7K p{color:#fff}.Home_footer____T7K a,.Home_navlink__CGpba{display:flex;justify-content:center;align-items:center;flex-grow:1}.Home_navlink__CGpba{color:#333;letter-spacing:.2em}.Home_title__T09hD a{color:#0070f3;text-decoration:none}.Home_navlink__CGpba:active,.Home_navlink__CGpba:focus,.Home_navlink__CGpba:hover,.Home_title__T09hD a:active,.Home_title__T09hD a:focus,.Home_title__T09hD a:hover{text-decoration:underline}.Home_title__T09hD{margin:0;line-height:1.2;font-size:3rem;color:#999;font-weight:100}.Home_title2__onZmd{margin:0;font-size:3rem;color:#488a6e;font-weight:600}.Home_description__41Owk,.Home_title__T09hD{text-align:left}.Home_description__41Owk{margin:4rem 0;line-height:1.5;font-size:1.5rem}.Home_code__suPER{background:#fafafa;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.Home_button__Zs7A2{display:inline-block;border:none;padding:1rem;margin:0;text-decoration:none;background:#488a6e2b;color:#333;font-family:Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:12px;font-weight:400;letter-spacing:.2em;cursor:pointer;text-align:center;transition:background .25s ease-in-out,transform .15s ease;-webkit-appearance:none;-moz-appearance:none}.Home_triangleTopLeft__R0FMP{width:0;height:0;border-top:1000px solid #e6faf2;border-right:2800px solid transparent;position:absolute;z-index:-1}.Home_grid__GxQ85{flex-direction:column;margin:4rem 0;grid-gap:2rem;gap:2rem}.Home_grid__GxQ85,.Home_horizontalgrid__zIWp5{display:flex;align-items:center;justify-content:center;width:100%}.Home_horizontalgrid__zIWp5{flex-direction:row;max-width:800px;margin:1rem 0}.Home_card___LpL1{margin:1rem;padding:1.5rem;text-align:center;color:inherit;text-decoration:none;border:1px solid #eaeaea;border-radius:10px;transition:color .15s ease,border-color .15s ease;max-width:300px}.Home_card___LpL1:active,.Home_card___LpL1:focus,.Home_card___LpL1:hover{color:#0070f3;border-color:#0070f3}.Home_heading__BTwrO{font-size:64px;line-height:64px;color:#488a6e}.Home_heading__BTwrO,.Home_subheading__Bq80U{font-family:Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-style:normal;font-weight:300;text-align:center;margin:0}.Home_subheading__Bq80U{font-size:30px;color:#bdbdbd}.Home_card___LpL1 h2{margin:0 0 1rem;font-size:1.5rem}.Home_card___LpL1 p{margin:0;font-size:16px;line-height:1.5;font-family:Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif}.Home_logo__27_tb{height:1em;margin-left:.5rem}@media (max-width:600px){.Home_grid__GxQ85{width:100%;flex-direction:column}}.Home_gridlayout__MVjxg{padding:0 200px;display:grid;grid-template-columns:repeat(3,1fr);grid-gap:10px;gap:10px;justify-items:center;align-items:center;position:relative}.Home_chat__WgYH_{background:#e6faf2;width:100%;height:30rem}.Home_chat__WgYH_ div{width:500px;margin:0 auto;padding-top:10rem}.Home_textinput__LRUcR{display:inline-block;border:none;padding:1rem;margin:1.4rem 5px;width:416px;text-decoration:none;background:#f7fffc;color:#333;font-family:Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:12px;font-weight:400;letter-spacing:.2em;cursor:pointer;text-align:center;transition:background .25s ease-in-out,transform .15s ease;-webkit-appearance:none;-moz-appearance:none}
+.Home_main__nLjiQ {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Home_section__taYTg {
+  width: 100%;
+  min-height: 25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+.Home_nav__vYbrQ {
+  background-color: #e6faf2;
+}
+.Home_footer____T7K,
+.Home_nav__vYbrQ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.Home_footer____T7K {
+  background: #000;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+}
+.Home_footer____T7K p {
+  color: #fff;
+}
+.Home_footer____T7K a,
+.Home_navlink__CGpba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.Home_navlink__CGpba {
+  color: #333;
+  letter-spacing: 0.2em;
+}
+.Home_title__T09hD a {
+  color: #0070f3;
+  text-decoration: none;
+}
+.Home_navlink__CGpba:active,
+.Home_navlink__CGpba:focus,
+.Home_navlink__CGpba:hover,
+.Home_title__T09hD a:active,
+.Home_title__T09hD a:focus,
+.Home_title__T09hD a:hover {
+  text-decoration: underline;
+}
+.Home_title__T09hD {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 3rem;
+  color: #999;
+  font-weight: 100;
+}
+.Home_title2__onZmd {
+  margin: 0;
+  font-size: 3rem;
+  color: #488a6e;
+  font-weight: 600;
+}
+.Home_description__41Owk,
+.Home_title__T09hD {
+  text-align: left;
+}
+.Home_description__41Owk {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+.Home_code__suPER {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+.Home_button__Zs7A2 {
+  display: inline-block;
+  border: none;
+  padding: 1rem;
+  margin: 0;
+  text-decoration: none;
+  background: #488a6e2b;
+  color: #333;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.25s ease-in-out, transform 0.15s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.Home_triangleTopLeft__R0FMP {
+  width: 0;
+  height: 0;
+  border-top: 1000px solid #e6faf2;
+  border-right: 2800px solid transparent;
+  position: absolute;
+  z-index: -1;
+}
+.Home_grid__GxQ85 {
+  flex-direction: column;
+  margin: 4rem 0;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.Home_grid__GxQ85,
+.Home_horizontalgrid__zIWp5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Home_horizontalgrid__zIWp5 {
+  flex-direction: row;
+  max-width: 800px;
+  margin: 1rem 0;
+}
+.Home_card___LpL1 {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+.Home_card___LpL1:active,
+.Home_card___LpL1:focus,
+.Home_card___LpL1:hover {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+.Home_heading__BTwrO {
+  font-size: 64px;
+  line-height: 64px;
+  color: #488a6e;
+}
+.Home_heading__BTwrO,
+.Home_subheading__Bq80U {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
+    sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+.Home_subheading__Bq80U {
+  font-size: 30px;
+  color: #bdbdbd;
+}
+.Home_card___LpL1 h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+.Home_card___LpL1 p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
+    sans-serif;
+}
+.Home_logo__27_tb {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+@media (max-width: 600px) {
+  .Home_grid__GxQ85 {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.Home_gridlayout__MVjxg {
+  padding: 0 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+.Home_chat__WgYH_ {
+  background: #e6faf2;
+  width: 100%;
+  height: 30rem;
+}
+.Home_chat__WgYH_ div {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 10rem;
+}
+.Home_textinput__LRUcR {
+  display: inline-block;
+  border: none;
+  padding: 1rem;
+  margin: 1.4rem 5px;
+  width: 416px;
+  text-decoration: none;
+  background: #f7fffc;
+  color: #333;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.25s ease-in-out, transform 0.15s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

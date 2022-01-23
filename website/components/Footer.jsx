@@ -23,7 +23,7 @@ export const Footer = () => {
           style={{ marginTop: "1rem", height: "214px" }}
         />
       </div>
-      <div style={{ display: "flex", flexDirection: "column",gap: "10px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <p>
           <b>Information</b>
         </p>
@@ -32,7 +32,7 @@ export const Footer = () => {
         <p>Sign UP</p>
         <p>Contacts</p>
       </div>
-      <div style={{ display: "flex", flexDirection: "column",gap: "10px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <p>
           <b>Contacts</b>
         </p>
@@ -58,7 +58,7 @@ export const Footer = () => {
           <p>info@McAsks.ca</p>
         </span>
       </div>
-      <div style={{ display: "flex", flexDirection: "column",gap: "10px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <p>
           <b>Social Media</b>
         </p>

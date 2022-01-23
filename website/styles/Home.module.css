@@ -1,5 +1,4 @@
 .container {
-  
 }
 
 .main {
@@ -16,14 +15,15 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: space-evenly;}
+  justify-content: space-evenly;
+}
 
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #E6FAF2;
+  background-color: #e6faf2;
 }
 
 .footer {
@@ -106,29 +106,29 @@
 }
 
 .button {
-    display: inline-block;
-    border: none;
-    padding: 1rem 1rem;
-    margin: 0;
-    text-decoration: none;
-    background: #488A6E2B;
-    color: #333;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  display: inline-block;
+  border: none;
+  padding: 1rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  background: #488a6e2b;
+  color: #333;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.triangleTopLeft{
-  width: 0; 
-  height: 0; 
-  border-top: 1000px solid #E6FAF2; 
+.triangleTopLeft {
+  width: 0;
+  height: 0;
+  border-top: 1000px solid #e6faf2;
   border-right: 2800px solid transparent;
   position: absolute;
   z-index: -1;
@@ -176,27 +176,29 @@
 }
 
 .heading {
-font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-style: normal;
-font-weight: 300;
-font-size: 64px;
-line-height: 64px;
-/* or 100% */
-text-align: center;
-color: #488A6E;
-margin: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 64px;
+  /* or 100% */
+  text-align: center;
+  color: #488a6e;
+  margin: 0;
 }
 
 .subheading {
   margin: 0;
-font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-style: normal;
-font-weight: 300;
-font-size: 30px;
-/* or 213% */
-text-align: center;
-/* Gray 4 */
-color: #BDBDBD;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  /* or 213% */
+  text-align: center;
+  /* Gray 4 */
+  color: #bdbdbd;
 }
 
 .card h2 {
@@ -208,8 +210,8 @@ color: #BDBDBD;
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .logo {
@@ -235,7 +237,7 @@ color: #BDBDBD;
 }
 
 .chat {
-  background:#E6FAF2; 
+  background: #e6faf2;
   width: 100%;
   height: 30rem;
 }
@@ -249,7 +251,6 @@ color: #BDBDBD;
   padding-top: 10rem;
 }
 
-
 .textinput {
   display: inline-block;
   border: none;
@@ -259,15 +260,14 @@ color: #BDBDBD;
   text-decoration: none;
   background: #f7fffc;
   color: #333;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.2em;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, 
-              transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-
 }

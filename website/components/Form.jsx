@@ -42,9 +42,9 @@ export function Form() {
     // send a text msg too
     const res2 = await fetch("https://api.m3o.com/v1/emoji/Send", {
       body: JSON.stringify({
-        from: 'your assistant McAsks.',
+        from: "your assistant McAsks.",
         message: "Thank you for signing up and cheers to the future! 🥂 ",
-        to: event.target.textinput.value
+        to: event.target.textinput.value,
       }),
       headers: {
         "Content-Type": "application/json",

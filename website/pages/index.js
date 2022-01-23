@@ -5,7 +5,6 @@ import { Footer } from "../components/Footer";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Link from "next/link";
 
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -57,9 +56,7 @@ export default function Home() {
                 style={{ margin: "20px", width: "135px" }}
               />
               <p style={{ fontWeight: "600" }}>Location</p>
-              <p>
-                Never get lost again with on-deman location and directions.
-              </p>
+              <p>Never get lost again with on-deman location and directions.</p>
             </div>
 
             <div className={styles.card}>
@@ -69,7 +66,8 @@ export default function Home() {
               />
               <p style={{ fontWeight: "600" }}>Search</p>
               <p>
-                Wanted to know what a term means but don't have internet? Fret not!
+                Wanted to know what a term means but don't have internet? Fret
+                not!
               </p>
             </div>
 
@@ -79,9 +77,7 @@ export default function Home() {
                 style={{ margin: "20px", width: "135px" }}
               />
               <p style={{ fontWeight: "600" }}>Jokes</p>
-              <p>
-                McAsks is always there for you to brighten up your day!
-              </p>
+              <p>McAsks is always there for you to brighten up your day!</p>
             </div>
           </div>
         </section>

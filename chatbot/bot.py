@@ -67,7 +67,7 @@ def bot():
         url = "https://api.m3o.com/v1/emoji/Send"
         data_msg = {
             "from": "your assistant McAsks",
-            "message": "{}".format(resp.json()['jokes'][0]['body']+ "\n"),
+            "message": "{}".format(resp.json()['jokes'][0]['body'] + "\n"),
             "to": "{}".format(incoming_number)
         }
         resp = requests.post(url, headers=headers, json=data_msg)

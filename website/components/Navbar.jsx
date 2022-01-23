@@ -14,7 +14,7 @@ export const Navbar = () => {
           />
         </span>
       </Link>
-      <div style={{display: "flex", gap: "1.5rem"}}>
+      <div style={{ display: "flex", gap: "1.5rem" }}>
         <Link href="/">
           <a className={styles.navlink}> HOME </a>
         </Link>

@@ -1,14 +1,18 @@
-import json, requests
-def getDirections(address, address2):
-    #To get long and lat for first addy
-    url = "https://api.geoapify.com/v1/geocode/autocomplete?text="+address+"&type=street&apiKey=5b09bb7d174f4c0cb5aded67d38bc0b8"
+import json
+import requests
 
-    payload={}
-    headers = {}  
+
+def getDirections(address, address2):
+    # To get long and lat for first addy
+    url = "https://api.geoapify.com/v1/geocode/autocomplete?text=" + \
+        address+"&type=street&apiKey=5b09bb7d174f4c0cb5aded67d38bc0b8"
+
+    payload = {}
+    headers = {}
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    #print(response.text)
+    # print(response.text)
 
     j = response.text
 
@@ -16,22 +20,22 @@ def getDirections(address, address2):
 
     long = jsonStr['features'][0]['properties']['lon']
 
-    #print(long)
+    # print(long)
 
     lat = jsonStr['features'][0]['properties']['lat']
 
-    #print(lat)
+    # print(lat)
 
+    # To get long and lat for second addy
+    url2 = "https://api.geoapify.com/v1/geocode/autocomplete?text=" + \
+        address2+"&type=street&apiKey=5b09bb7d174f4c0cb5aded67d38bc0b8"
 
-    #To get long and lat for second addy
-    url2 = "https://api.geoapify.com/v1/geocode/autocomplete?text="+address2+"&type=street&apiKey=5b09bb7d174f4c0cb5aded67d38bc0b8"
-
-    payload={}
+    payload = {}
     headers = {}
 
     response2 = requests.request("GET", url2, headers=headers, data=payload)
 
-    #print(response2.text)
+    # print(response2.text)
 
     j2 = response2.text
 
@@ -39,16 +43,16 @@ def getDirections(address, address2):
 
     long2 = jsonStr2['features'][0]['properties']['lon']
 
-    #print(long2)
+    # print(long2)
 
     lat2 = jsonStr2['features'][0]['properties']['lat']
 
-    #print(lat2)
+    # print(lat2)
 
+    url = "https://api.geoapify.com/v1/routing?waypoints="+str(lat)+","+str(long)+"|"+str(
+        lat2)+","+str(long2)+"&mode=walk&lang=en&apiKey=5b09bb7d174f4c0cb5aded67d38bc0b8"
 
-    url = "https://api.geoapify.com/v1/routing?waypoints="+str(lat)+","+str(long)+"|"+str(lat2)+","+str(long2)+"&mode=walk&lang=en&apiKey=5b09bb7d174f4c0cb5aded67d38bc0b8"
-
-    payload={}
+    payload = {}
     headers = {}
 
     response = requests.request("GET", url, headers=headers, data=payload)
@@ -56,7 +60,6 @@ def getDirections(address, address2):
     d = response.text
 
     stepsjson = json.loads(d)
-
 
     instructions = stepsjson['features'][0]['properties']['legs'][0]['steps']
 
