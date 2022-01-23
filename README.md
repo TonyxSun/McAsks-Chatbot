@@ -27,3 +27,6 @@ Your personal assistant :) . Made with ❤️ at McHacks 2022.
 - `cat`
 - `quote`
 - `joke`
+- `Directions, [street city departure], [street city arrival]`
+- `term`*(search)*
+- more to come!!!!!
