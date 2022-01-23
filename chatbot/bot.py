@@ -48,7 +48,6 @@ def bot():
     for word in greetings:
         if word in incoming_msg and not responded:
             msg.body("Hello! How can I help you? Type \"about\" for instructions")
-            responded = True
 
     if 'about' in incoming_msg:
         msg.body("Hello and welcome! For directions, follow the format " +
@@ -101,15 +100,23 @@ def bot():
         msg.body(x)
         responded = True
 
-    if len(incoming_msg.split()) == 1:
-        try:
-            msg.body(search.search(incoming_msg))
-            responded = True
-        except:
-            pass
+        """
+        if parameter2 == "forecast":
+            if "-" not in parameter3:
+                x = weather.get_future_weather1(parameter1)
+            else:
+                x = weather.get_future_weather(parameter1, parameter3)
+        else:
+            x = weather.get_cur_weather(parameter3.split(" "), parameter1)
+        """
+
 
     if not responded:
-        msg.body('I don\'t know how to answer that, sorry! Type \"about\" for instructions.')
+        body = search.run_json(incoming_msg)
+        if body == "":
+            msg.body('I don\'t know how to answer that, sorry!')
+        else:
+            msg.body(search.run_json(incoming_msg))
     return str(resp)
 
 
