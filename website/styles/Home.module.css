@@ -241,10 +241,12 @@ color: #BDBDBD;
 }
 
 .chat div {
-
-  position: relative;
-  left: 7rem;
-  top: 8rem;
+  width: 500px;
+  /* position: relative;
+  left: 50%;
+  top: 8rem; */
+  margin: 0px auto;
+  padding-top: 10rem;
 }
 
 
