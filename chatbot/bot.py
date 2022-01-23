@@ -47,7 +47,7 @@ def bot():
 
     for word in greetings:
         if word in incoming_msg:
-            msg.body("Hello! Type \"about\" for instructions")
+            msg.body("Hello! How can I help you? Type \"about\" for instructions")
             responded = True
 
     if 'about' in incoming_msg:
