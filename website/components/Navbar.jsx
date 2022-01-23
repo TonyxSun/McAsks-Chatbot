@@ -18,8 +18,8 @@ export const Navbar = () => {
         <Link href="/">
           <a className={styles.navlink}> HOME </a>
         </Link>
-        <Link href="/askfree">
-          <a className={styles.navlink}> ASKFREE </a>
+        <Link href="/ask">
+          <a className={styles.navlink}> ASK </a>
         </Link>
         {/* <Link href='/askplus'>
           <span><a className={styles.navlink}> ASK + </a></span>
