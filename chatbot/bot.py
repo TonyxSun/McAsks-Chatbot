@@ -37,7 +37,7 @@ def bot():
     msg = resp.message()
     responded = False
     split_msg = incoming_msg.split(',')
-    if len(split_msg) > 1:
+    if len(split_msg) == 2:
         parameter1 = split_msg[1]
         parameter2 = split_msg[2]
         print(parameter1, parameter2)
