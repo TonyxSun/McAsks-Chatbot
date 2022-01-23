@@ -18,13 +18,26 @@
   align-items: stretch;
   justify-content: space-evenly;}
 
-.footer {
+.nav {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #E6FAF2;
+}
+
+.footer {
+  background: black;
+  display: flex;
+  flex-direction: row;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.footer p {
+  color: white;
 }
 
 .footer a {
@@ -34,6 +47,15 @@
   flex-grow: 1;
 }
 
+.navlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: #333333;
+  letter-spacing: 0.2em;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -41,7 +63,10 @@
 
 .title a:hover,
 .title a:focus,
-.title a:active {
+.title a:active,
+.navlink:focus,
+.navlink:hover,
+.navlink:active {
   text-decoration: underline;
 }
 
@@ -83,7 +108,7 @@
 .button {
     display: inline-block;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin: 0;
     text-decoration: none;
     background: #488A6E2B;
@@ -111,16 +136,30 @@
 
 .grid {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
+  /* flex-wrap: wrap; */
+  /* max-width: 800px; */
+  margin: 4rem 0rem;
+  gap: 2rem;
+}
+
+.horizontalgrid {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   max-width: 800px;
+  margin: 1rem 0rem;
 }
 
 .card {
   margin: 1rem;
   padding: 1.5rem;
-  text-align: left;
+  text-align: center;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
@@ -136,6 +175,30 @@
   border-color: #0070f3;
 }
 
+.heading {
+font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 64px;
+line-height: 64px;
+/* or 100% */
+text-align: center;
+color: #488A6E;
+margin: 0;
+}
+
+.subheading {
+  margin: 0;
+font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+/* or 213% */
+text-align: center;
+/* Gray 4 */
+color: #BDBDBD;
+}
+
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
@@ -143,8 +206,10 @@
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 16px;
   line-height: 1.5;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .logo {
@@ -157,4 +222,50 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.gridlayout {
+  padding: 0 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.chat {
+  background:#E6FAF2; 
+  width: 100%;
+  height: 30rem;
+}
+
+.chat div {
+
+  position: relative;
+  left: 7rem;
+  top: 8rem;
+}
+
+
+.textinput {
+  display: inline-block;
+  border: none;
+  padding: 1rem 1rem;
+  margin: 1.4rem 5px;
+  width: 416px;
+  text-decoration: none;
+  background: #f7fffc;
+  color: #333;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
 }
